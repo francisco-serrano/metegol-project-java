@@ -1,6 +1,6 @@
 # metegol-project-java
 
-## Checklist
+## Checklist before functionality
 - [ ] App Dockerization (dev and prod)
 - [ ] Integration Testing
 - [ ] Unit Testing
