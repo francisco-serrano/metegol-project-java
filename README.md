@@ -6,7 +6,8 @@
 - [ ] Unit Testing
 - [ ] Logging Structure (correlation-id)
 - [ ] CI: Travis
-- [ ] Travis Badge
+- [ ] Code Coverage
+- [ ] Travis and Coverage Badges
 - [ ] Configure AWS VPC, Security Groups, etc.
 - [ ] CD: Elastic Beanstalk (Disable Auto-Scaling)
 - [ ] Connection to database
