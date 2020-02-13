@@ -1,0 +1,16 @@
+FROM maven:3.6.3-jdk-11
+
+RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
+RUN apt-get install -y nodejs
+RUN npm install -g nodemon
+RUN apt-get install -y build-essential
+
+WORKDIR /usr/src/app
+
+COPY ./pom.xml /usr/src/app
+COPY ./src/main/java/com/github/franciscoserrano/metegolproject/MetegolProjectApplication.java /usr/src/app/src/main/java/com/github/franciscoserrano/metegolproject/
+RUN mvn package
+
+COPY ./src /usr/src/app/src
+
+CMD nodemon --exec "mvn spring-boot:run" -e java --watch src --signal SIGTERM

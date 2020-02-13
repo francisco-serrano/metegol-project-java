@@ -1,18 +1,20 @@
 # metegol-project-java
 
 ## Checklist before functionality
-- [ ] App Dockerization (dev and prod)
+- [x] App Dockerization (Dev Environment)
+- [x] App Dockerization (Prod Environment)
 - [ ] Integration Testing
+- [ ] App Dockerization (Test Environment)
 - [ ] Unit Testing
-- [ ] Logging Structure (correlation-id)
 - [ ] CI: Travis
+- [ ] Rearrange Makefiles
 - [ ] Travis Badge
+- [ ] Logging Structure (correlation-id)
 - [ ] Configure AWS VPC, Security Groups, etc.
 - [ ] CD: Elastic Beanstalk (Disable Auto-Scaling)
 - [ ] Connection to database
 - [ ] Migrations Setup
 - [ ] Complete Health Check
-- [ ] Docker Compose
 - [ ] Authentication with JWT
 - [ ] Swagger
 - [ ] Monitoring with Actuator
