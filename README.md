@@ -3,10 +3,9 @@
 ## Checklist before functionality
 - [x] App Dockerization (Dev Environment)
 - [x] App Dockerization (Prod Environment)
-- [ ] Integration Testing
-- [ ] App Dockerization (Test Environment)
-- [ ] Unit Testing
-- [ ] CI: Travis
+- [x] Integration Testing
+- [x] Unit Testing
+- [ ] CI: Travis - App Dockerization (Test Environment)
 - [ ] Rearrange Makefiles
 - [ ] Travis Badge
 - [ ] Logging Structure (correlation-id)
