@@ -1,4 +1,5 @@
 # metegol-project-java
+[![Build Status](https://travis-ci.com/francisco-serrano/metegol-project-java.svg?branch=master)](https://travis-ci.com/francisco-serrano/metegol-project-java)
 
 ## Checklist before functionality
 - [x] App Dockerization (Dev Environment)
