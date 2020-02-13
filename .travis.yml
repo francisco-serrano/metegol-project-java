@@ -14,7 +14,4 @@ script:
   - make run-test
 
 after_success:
-  - docker build -t franciscoserrano/metegol-project:latest -t franciscoserrano/metegol-project:$SHA .
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-  - docker push franciscoserrano/metegol-project:latest
-  - docker push franciscoserrano/metegol-project:$SHA
+  - make build-deploy
