@@ -8,10 +8,10 @@ env:
     - SHA=$(git rev-parse HEAD)
 
 before_install:
-  - docker build -t franciscoserrano/metegol-project-test -f ./Dockerfile.dev
+  - make build-test
 
 script:
-  - docker run franciscoserrano/metegol-project-test mvn test
+  - make run-test
 
 after_success:
   - docker build -t franciscoserrano/metegol-project:latest -t franciscoserrano/metegol-project:$SHA .
