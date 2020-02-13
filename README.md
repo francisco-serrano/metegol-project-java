@@ -6,9 +6,9 @@
 - [x] App Dockerization (Prod Environment)
 - [x] Integration Testing
 - [x] Unit Testing
-- [ ] CI: Travis - App Dockerization (Test Environment)
-- [ ] Rearrange Makefiles
-- [ ] Travis Badge
+- [x] CI: Travis - App Dockerization (Test Environment)
+- [x] Rearrange Makefiles
+- [ ] Codacy Reports
 - [ ] Logging Structure (correlation-id)
 - [ ] Configure AWS VPC, Security Groups, etc.
 - [ ] CD: Elastic Beanstalk (Disable Auto-Scaling)
