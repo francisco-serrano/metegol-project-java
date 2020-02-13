@@ -7,7 +7,7 @@
 - [x] Integration Testing
 - [x] Unit Testing
 - [x] CI: Travis - App Dockerization (Test Environment)
-- [x] Rearrange Makefiles
+- [ ] Rearrange Makefiles
 - [ ] Codacy Reports
 - [ ] Logging Structure (correlation-id)
 - [ ] Configure AWS VPC, Security Groups, etc.
