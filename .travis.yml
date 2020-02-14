@@ -27,3 +27,15 @@ after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   - docker push franciscoserrano/metegol-project:latest
   - docker push franciscoserrano/metegol-project:$SHA
+
+deploy:
+  provider: elasticbeanstalk
+  region: us-east-2
+  app: metegol-project
+  env: MetegolProject-env
+  bucket-name: elasticbeanstalk-us-east-2-050422725413
+  bucket-path: metegol-project
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
