@@ -1,5 +1,7 @@
 # metegol-project-java
 [![Build Status](https://travis-ci.com/francisco-serrano/metegol-project-java.svg?branch=master)](https://travis-ci.com/francisco-serrano/metegol-project-java)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/caeccb67bdd14473975bb2fdc53f9ad5)](https://www.codacy.com/manual/francisco-serrano/metegol-project-java?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=francisco-serrano/metegol-project-java&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://api.codacy.com/project/badge/Coverage/caeccb67bdd14473975bb2fdc53f9ad5)](https://www.codacy.com/manual/francisco-serrano/metegol-project-java?utm_source=github.com&utm_medium=referral&utm_content=francisco-serrano/metegol-project-java&utm_campaign=Badge_Coverage)
 
 ## Checklist before functionality
 - [x] App Dockerization (Dev Environment)
@@ -7,8 +9,8 @@
 - [x] Integration Testing
 - [x] Unit Testing
 - [x] CI: Travis - App Dockerization (Test Environment)
-- [ ] Rearrange Makefiles
-- [ ] Codacy Reports
+- [x] Rearrange Makefiles
+- [x] Codacy Reports
 - [ ] Logging Structure (correlation-id)
 - [ ] Configure AWS VPC, Security Groups, etc.
 - [ ] CD: Elastic Beanstalk (Disable Auto-Scaling)

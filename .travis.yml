@@ -17,15 +17,12 @@ before_cache:
 
 before_install:
   - chmod +x mvnw
-  - sudo apt-get install jq
-  - wget -O ~/codacy-coverage-reporter-assembly-latest.jar $(curl https://api.github.com/repos/codacy/codacy-coverage-reporter/releases/latest | jq -r .assets[0].browser_download_url)
-  - docker build -t franciscoserrano/metegol-project-test -f ./Dockerfile.dev .
+  - docker build -t franciscoserrano/metegol-project-test -f ./Dockerfile.test .
 
 script:
-  - docker run franciscoserrano/metegol-project-test mvn test
+  - docker run -e CODACY_PROJECT_TOKEN=$CODACY_PROJECT_TOKEN franciscoserrano/metegol-project-test
 
 after_success:
-  - java -jar ~/codacy-coverage-reporter-assembly-latest.jar report -l Java -r target/jacoco/jacoco.xml
   - docker build -t franciscoserrano/metegol-project:latest -t franciscoserrano/metegol-project:$SHA .
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   - docker push franciscoserrano/metegol-project:latest

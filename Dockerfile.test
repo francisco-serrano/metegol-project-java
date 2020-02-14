@@ -1,0 +1,16 @@
+FROM maven:3.6.3-jdk-11
+
+RUN apt update
+RUN apt install -y jq
+
+WORKDIR /usr/src/app
+
+COPY ./pom.xml /usr/src/app
+COPY ./src/main/java/com/github/franciscoserrano/metegolproject/MetegolProjectApplication.java /usr/src/app/src/main/java/com/github/franciscoserrano/metegolproject/
+
+RUN wget -O ./codacy-coverage-reporter-assembly-latest.jar $(curl https://api.github.com/repos/codacy/codacy-coverage-reporter/releases/latest | jq -r .assets[0].browser_download_url)
+
+COPY ./src /usr/src/app/src
+COPY ./.git /usr/src/app/.git
+
+CMD mvn package && java -jar codacy-coverage-reporter-assembly-latest.jar report -l Java -r ./target/site/jacoco/jacoco.xml
