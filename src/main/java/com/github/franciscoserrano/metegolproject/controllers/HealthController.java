@@ -1,6 +1,7 @@
 package com.github.franciscoserrano.metegolproject.controllers;
 
 import com.github.franciscoserrano.metegolproject.services.HealthService;
+import com.github.franciscoserrano.metegolproject.utils.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,6 +20,8 @@ public class HealthController {
 
     @GetMapping
     public String healthCheck() {
+        Logger.info("performing health check");
+
         return this.healthService.check();
     }
 }

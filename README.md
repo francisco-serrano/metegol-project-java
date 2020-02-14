@@ -11,7 +11,7 @@
 - [x] CI: Travis - App Dockerization (Test Environment)
 - [x] Rearrange Makefiles
 - [x] Codacy Reports
-- [ ] Logging Structure (correlation-id)
+- [x] Logging Structure (correlation-id)
 - [ ] Configure AWS VPC, Security Groups, etc.
 - [ ] CD: Elastic Beanstalk (Disable Auto-Scaling)
 - [ ] Connection to database
