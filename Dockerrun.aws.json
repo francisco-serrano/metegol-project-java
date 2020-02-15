@@ -4,7 +4,6 @@
     {
       "name": "api",
       "image": "franciscoserrano/metegol-project",
-      "hostname": "api",
       "essential": true,
       "memory": 128,
       "portMappings": [
