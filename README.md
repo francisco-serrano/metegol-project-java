@@ -13,10 +13,10 @@
 - [x] Codacy Reports
 - [x] Logging Structure (correlation-id)
 - [x] Configure AWS VPC, Security Groups, etc.
-- [ ] CD: Elastic Beanstalk (Disable Auto-Scaling)
-- [ ] Connection to database
+- [x] CD: Elastic Beanstalk (Disable Auto-Scaling)
+- [ ] Connection to database (local)
+- [ ] Connection to database (aws)
 - [ ] Migrations Setup
-- [ ] Complete Health Check
 - [ ] Authentication with JWT
 - [ ] Swagger
 - [ ] Monitoring with Actuator
