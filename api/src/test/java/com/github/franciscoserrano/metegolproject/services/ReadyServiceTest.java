@@ -7,15 +7,15 @@ import org.springframework.boot.test.context.SpringBootTest;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @SpringBootTest
-public class HealthServiceTest {
+public class ReadyServiceTest {
 
     @Autowired
-    private HealthService healthService;
+    private ReadyService readyService;
 
     @Test
     public void sampleTest() {
-        var result = this.healthService.check();
+        var result = this.readyService.check();
 
-        assertEquals("ok", result);
+        assertEquals("service ready", result);
     }
 }

@@ -12,15 +12,15 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @SpringBootTest
 @AutoConfigureMockMvc
-public class HealthControllerTest {
+public class ReadyControllerTest {
 
     @Autowired
     private MockMvc mockMvc;
 
     @Test
-    public void healthCheckTest() throws Exception {
-        this.mockMvc.perform(get("/health"))
+    public void readyTest() throws Exception {
+        this.mockMvc.perform(get("/ready"))
                 .andExpect(status().isOk())
-                .andExpect(content().string("ok"));
+                .andExpect(content().string("service ready"));
     }
 }

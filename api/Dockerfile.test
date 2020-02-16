@@ -13,4 +13,4 @@ RUN wget -O ./codacy-coverage-reporter-assembly-latest.jar $(curl https://api.gi
 COPY ./src /usr/src/app/src
 COPY ./.git /usr/src/app/.git
 
-CMD mvn package && java -jar codacy-coverage-reporter-assembly-latest.jar report -l Java -r ./target/site/jacoco/jacoco.xml
+CMD mvn package -Dspring-boot.run.profiles=local-docker && java -jar codacy-coverage-reporter-assembly-latest.jar report -l Java -r ./target/site/jacoco/jacoco.xml
