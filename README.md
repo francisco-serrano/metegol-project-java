@@ -14,10 +14,10 @@
 - [x] Logging Structure (correlation-id)
 - [x] Configure AWS VPC, Security Groups, etc.
 - [x] CD: Elastic Beanstalk (Disable Auto-Scaling)
-- [ ] Connection to database (local)
+- [x] Connection to database (local)
 - [ ] Connection to database (aws)
-- [ ] Migrations Setup
+- [x] Migrations Setup
 - [ ] Authentication with JWT
 - [ ] Swagger
-- [ ] Monitoring with Actuator
+- [x] Monitoring with Actuator
 - [ ] Scripts for load testing with ApacheBench
