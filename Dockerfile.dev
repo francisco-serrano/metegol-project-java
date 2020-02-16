@@ -13,4 +13,4 @@ RUN mvn package
 
 COPY ./src /usr/src/app/src
 
-CMD nodemon --exec "mvn spring-boot:run  -Dspring-boot.run.profiles=local-docker" -e java --watch src --signal SIGTERM
+CMD nodemon --exec "mvn spring-boot:run -Dspring-boot.run.profiles=local-docker" -e java --watch src pom.xml --signal SIGTERM

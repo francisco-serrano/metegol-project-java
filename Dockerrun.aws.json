@@ -12,6 +12,18 @@
           "containerPort": 8080
         }
       ]
+    },
+    {
+      "name": "mysql",
+      "image": "mysql:8.0.19",
+      "essential": false,
+      "memory": 128,
+      "portMappings": [
+        {
+          "hostPort": 3306,
+          "containerPort": 3306
+        }
+      ]
     }
   ]
 }
