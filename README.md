@@ -17,9 +17,8 @@
 - [x] Connection to database (local)
 - [ ] Connection to database (aws)
 - [x] Migrations Setup
-- [ ] Authentication with JWT
+- [x] Authentication with JWT
 - [ ] Add CORS support
 - [ ] Swagger
 - [x] Monitoring with Actuator
 - [ ] Scripts for load testing with ApacheBench
-- [ ] Add tests for remaining endpoints
