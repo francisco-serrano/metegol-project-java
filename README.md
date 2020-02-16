@@ -21,3 +21,4 @@
 - [ ] Swagger
 - [x] Monitoring with Actuator
 - [ ] Scripts for load testing with ApacheBench
+- [ ] Add tests for remaining endpoints
