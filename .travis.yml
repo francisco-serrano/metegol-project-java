@@ -24,6 +24,7 @@ before_install:
 script:
 #  - docker run -e CODACY_PROJECT_TOKEN=$CODACY_PROJECT_TOKEN franciscoserrano/metegol-project-test
   - docker-compose logs mysqltest
+  - chmod +x /home/travis/build/francisco-serrano/metegol-project-java/mysqltest/ca-key.pem
   - docker-compose up apitest
 
 after_success:
