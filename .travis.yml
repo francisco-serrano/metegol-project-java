@@ -18,7 +18,8 @@ before_cache:
 
 before_install:
   - chmod +x mvnw
-  - docker-compose up -d mysqltest
+  - chmod +x docker-compose
+  - docker-compose up mysqltest
 #  - docker build -t franciscoserrano/metegol-project-test -f ./Dockerfile.test .
 
 script:
