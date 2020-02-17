@@ -18,11 +18,12 @@ before_cache:
 
 before_install:
   - chmod +x mvnw
-  - docker-compose up mysqltest
+  - docker-compose up -d mysqltest
 #  - docker build -t franciscoserrano/metegol-project-test -f ./Dockerfile.test .
 
 script:
 #  - docker run -e CODACY_PROJECT_TOKEN=$CODACY_PROJECT_TOKEN franciscoserrano/metegol-project-test
+  - docker-compose logs mysqltest
   - docker-compose up apitest
 
 after_success:
