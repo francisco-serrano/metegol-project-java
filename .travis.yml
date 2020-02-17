@@ -19,10 +19,8 @@ before_cache:
 before_install:
   - chmod +x mvnw
   - docker-compose up -d mysqltest
-#  - docker build -t franciscoserrano/metegol-project-test -f ./Dockerfile.test .
 
 script:
-#  - docker run -e CODACY_PROJECT_TOKEN=$CODACY_PROJECT_TOKEN franciscoserrano/metegol-project-test
   - docker-compose logs mysqltest
   - sudo chmod -R +x mysqltest
   - sudo docker-compose up apitest
@@ -34,14 +32,14 @@ after_success:
   - docker push franciscoserrano/metegol-project:latest
   - docker push franciscoserrano/metegol-project:$SHA
 
-#deploy:
-#  provider: elasticbeanstalk
-#  region: us-east-2
-#  app: metegol-project
-#  env: MetegolProject-env
-#  bucket-name: elasticbeanstalk-us-east-2-050422725413
-#  bucket-path: metegol-project
-#  on:
-#    branch: master
-#  access_key_id: $AWS_ACCESS_KEY
-#  secret_access_key: $AWS_SECRET_KEY
+deploy:
+  provider: elasticbeanstalk
+  region: us-east-2
+  app: metegol-project
+  env: MetegolProject-env
+  bucket-name: elasticbeanstalk-us-east-2-050422725413
+  bucket-path: metegol-project
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
