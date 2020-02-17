@@ -11,10 +11,14 @@
           "hostPort": 80,
           "containerPort": 8080
         }
+      ],
+      "links": [
+        "mysql"
       ]
     },
     {
       "name": "mysql",
+      "hostname": "mysql",
       "image": "mysql:8.0.19",
       "essential": false,
       "memory": 128,
@@ -22,6 +26,12 @@
         {
           "hostPort": 3306,
           "containerPort": 3306
+        }
+      ],
+      "environment": [
+        {
+          "name": "MYSQL_ROOT_PASSWORD",
+          "value": "root"
         }
       ]
     }
