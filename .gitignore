@@ -32,3 +32,4 @@ build/
 
 ### Database ###
 mysql/
+mysqltest/
